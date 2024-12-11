@@ -1,0 +1,73 @@
+/* Základný reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem; /* 1rem = 16px */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Hlavičky */
+.primary-header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 19.625%; /* 19.625% = (314px / 1600px) * 100 pre šírku */
+  display: flex;
+  justify-content: space-between;
+}
+
+.primary-header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.secondary-header {
+  background-color: #555;
+  color: #fff;
+  padding: 1.5rem 19.625%;
+  text-align: center;
+  font-size: 1.25rem; /* 20px */
+}
+
+/* Sekcie */
+.content {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1); /* prevod pixelov na rem */
+  max-width: 60%; /* Maximálna šírka 60% */
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem; /* 16px */
+}
+
+/* Responzivita */
+@media (max-width: 768px) {
+  .primary-header,
+  .secondary-header,
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .content {
+    max-width: 90%;
+  }
+}
